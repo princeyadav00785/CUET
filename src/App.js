@@ -1,11 +1,10 @@
 import './App.css';
+import Homepage from './pages/Homepage';
 
 function App() {
   return (
-    <div className='bg-black text-center'  >
-      <h1 className="text-5xl text-white font-bold underline">
-      Welcome to CUET
-    </h1>
+    <div>
+      <Homepage/>
     </div>
   );
 }
