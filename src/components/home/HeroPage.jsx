@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
 import ExamInfo from './Examinfo';
 
-// const Needhelp = () => {
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
+
 
 const HeroPage = () => {
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
   const handleBellIconClick = () => {
     setIsPopupOpen(!isPopupOpen);
   };
+  
   return (
     <div className="flex flex-row gap-[100px] items-start justify-between mx-auto box-border  text-left text-13xl text-blueviolet-100 font-inter">
       <div className="flex flex-col items-start gap-[42px] max-w-full">

@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import HeroPage from "../components/home/HeroPage";
 import HomeContact from "../components/home/HomeContact";
 import Footer from "../components/footer/Footer";
@@ -5,7 +6,24 @@ import Header from "../components/header/Header";
 import SubjectTopic from "../components/home/SubjectTopic";
 import Testinomials from "../components/home/Testinomials";
 
+const Needhelp = () => {
+  return (
+    <div className=' text-[10px] bg-[#FFFBEE] rounded-xl'>
+      <h1 className='p-3 '>Need Guidance or Help in Filling Form?</h1>
+      <h1 className='px-3 '>
+        <p>Sachin Rana &nbsp; &nbsp; &nbsp; &nbsp;  91+ 9560443520</p>
+        <p>Virendra Pratap &nbsp; &nbsp; &nbsp; &nbsp;  91+ 8279662680</p>
+      </h1>
+    </div>
+  )
+}
+
 const Homepage = () => {
+  const [isPopupOpen1, setIsPopupOpen1] = useState(false);
+
+  const handleBellIconClick2 = () => {
+    setIsPopupOpen1(!isPopupOpen1);
+  };
   return (
     <div className="w-full  relative bg-white overflow-hidden flex flex-col items-center  pt-5 px-0 pb-0 box-border gap-[81px] tracking-[normal]">
         <Header />
@@ -82,18 +100,28 @@ const Homepage = () => {
                 </b>
               </button>
             </div>
-            <div className="flex-1 flex flex-col items-start justify-start gap-[25px] min-w-[160px]">
+            <div  className="flex-1 flex flex-col items-start justify-start gap-[25px] min-w-[160px]">
               <input
                 className="w-full [border:none] [outline:none] bg-white self-stretch h-14 rounded-[9.16px] flex flex-row items-center justify-start pt-[18px] px-3.5 pb-[15px] box-border font-inter font-bold text-lg-3 text-gray-300 min-w-[147px] z-[1]"
                 placeholder="Reason"
                 type="text"
               />
-              <button className="cursor-pointer [border:none] py-2 px-[30px] bg-[transparent] flex flex-row items-center justify-center relative z-[1]">
-                <div className="h-full w-[calc(100%_-_4px)] absolute my-0 mx-[!important] top-[0px] right-[4px] bottom-[0px] left-[0px] rounded-[18.31px] bg-tomato-200" />
-                <b className="relative text-lg-3 font-inter text-white text-left z-[1]">
+              <div className="cursor-pointer [border:none] py-2 px-[30px] bg-[transparent] flex flex-row items-center justify-center relative z-[1]">
+              {isPopupOpen1 && (
+                <div  className=" top-[30px]  w-[600px]  absolute inset-0 flex z-50  bg-opacity-50"
+         >
+          <div  >
+          <Needhelp />
+          </div>
+        </div>
+      )}
+                <div onClick={handleBellIconClick2}   className="h-full w-[calc(100%_-_4px)] absolute my-0 mx-[!important] top-[0px] right-[4px] bottom-[0px] left-[0px] rounded-[18.31px] bg-tomato-200" />
+                <b onClick={handleBellIconClick2}    className="relative text-lg-3 font-inter text-white text-left z-[1]">
                   Need Help
                 </b>
-              </button>
+               
+              </div>
+           
             </div>
           </div>
         </form>
