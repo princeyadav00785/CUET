@@ -1,4 +1,5 @@
 import React from "react";
+import { IoMdCall, IoMdMail, IoMdPin } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -42,34 +43,22 @@ const Footer = () => {
           <div className="self-stretch flex flex-col items-end justify-start gap-[9px] text-center">
             <div className="w-[220px] flex flex-row items-end justify-between gap-[20px] text-left">
               <b className="relative z-[1]">School Students</b>
-              <img
-                className="h-5 w-5 relative object-cover min-h-[20px] z-[1]"
-                alt=""
-                src="/mail@2x.png"
-              />
+              <IoMdMail />
+
             </div>
             <div className="self-stretch flex flex-row items-center justify-between gap-[20px]">
               <div className="flex flex-col items-center justify-start gap-[10px]">
                 <b className="relative z-[1]">College Students</b>
                 <b className="relative z-[1]">Educational Institutions</b>
               </div>
-              <div className="flex flex-col items-start justify-start pt-0 px-0 pb-1">
-                <img
-                  className="w-5 h-5 relative object-cover z-[1]"
-                  loading="eager"
-                  alt=""
-                  src="/phone@2x.png"
-                />
+              <div className="flex flex-col items-start justify-start ">
+              <IoMdCall />
               </div>
             </div>
-            <div className="w-[216px] flex flex-row items-start justify-between gap-[20px]">
+            <div className="w-[216px] flex flex-row  justify-between gap-[20px]">
               <b className="relative z-[1]">Private Schools</b>
-              <img
-                className="h-5 w-5 relative object-cover min-h-[20px] z-[1]"
-                loading="eager"
-                alt=""
-                src="/location@2x.png"
-              />
+              <IoMdPin />
+
             </div>
             <div className="self-stretch flex flex-row items-start justify-start py-0 px-7">
               <b className="relative z-[1]">Private Colleges</b>
@@ -83,6 +72,7 @@ const Footer = () => {
           <div className="self-stretch flex flex-col items-end justify-start gap-[31px] text-sm">
             <div className="flex flex-col items-start justify-start gap-[25px]">
               <b className="relative whitespace-nowrap z-[1]">
+                
                 info@testknock.com
               </b>
               <b className="relative z-[1]">9953617456</b>

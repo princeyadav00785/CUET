@@ -58,7 +58,7 @@ const Testinomials = ({
         />
         <div className="self-stretch flex flex-col items-center justify-start gap-[21px]">
           <div
-            className="self-stretch relative font-semibold z-[1]"
+            className="self-stretch relative  z-[1]"
             style={enrollingInTheContainerStyle}
           >
             <p className="m-0">{`"Enrolling in the online CUET course was a game-changer for me. `}</p>

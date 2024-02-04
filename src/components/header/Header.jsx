@@ -14,7 +14,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="self-stretch mx-[20px] mt-[10px] h-16 flex flex-row items-start justify-between gap-[20px] max-w-full text-left text-base text-mediumblue font-inter">
+    <div className="self-stretch mx-8">
+      <header className="max-w-[1280px] mx-auto mt-[10px] h-16 flex flex-row items-start justify-between gap-[20px]  text-left text-base text-mediumblue font-inter">
       <div className="flex flex-row items-center justify-start gap-[7px]">
         <img
           className="h-[40.5px] w-[30px] relative object-cover"
@@ -76,6 +77,8 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </div>
+    
   );
 };
 

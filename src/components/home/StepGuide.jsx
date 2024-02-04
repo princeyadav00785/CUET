@@ -16,6 +16,7 @@ const StepGuide = ({
     return {
       top: propTop,
       left: propLeft,
+      transition: "transform 0.3s ease-out", 
     };
   }, [propTop, propLeft]);
 
@@ -35,10 +36,10 @@ const StepGuide = ({
 
   return (
     <div
-      className="absolute top-[101px] left-[1009px] flex flex-col items-start justify-start pt-0 pb-[7px] pr-[22px] pl-0.5 gap-[13px] z-[3] text-left text-5xl text-gray-200 font-inter"
+      className="absolute top-[101px] hover:scale-125 left-[1009px] flex flex-col items-start justify-start pt-0 pb-[7px] pr-[22px] pl-0.5 gap-[13px] z-[3] text-left text-5xl text-gray-200 font-inter"
       style={component8Style}
     >
-      <div className="w-full h-full absolute my-0 mx-[!important] top-[0px] right-[0px] bottom-[0px] left-[0px] bg-gainsboro-200" />
+      <div className="w-full h-full relative my-0 mx-[!important] top-[0px] right-[0px] bottom-[0px] left-[0px] bg-gainsboro-200" />
       <div
         className="relative font-semibold z-[1] mq450:text-lgi"
         style={step01Style}
