@@ -1,4 +1,3 @@
-// import Testinomials from "./Testinomials";
 import StepGuide from "./StepGuide";
 
 const HomeContact = () => {
