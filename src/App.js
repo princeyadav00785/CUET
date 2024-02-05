@@ -1,16 +1,16 @@
-import "./App.css";
-import Login from "./Component/Login/Login";
+
+import './App.css';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Homepage from './pages/Homepage';
 
 function App() {
   return (
-    <div className=" text-center">
-      {/* <h1 className="text-5xl text-black font-bold underline">
-        Welcome to CUET
-      </h1> */}
-      <div className="login-container">
-        <Login />
-      </div>
-    </div>
+    <Router>
+    <Routes>
+    <Route path="/" element={<Homepage />} />
+
+    </Routes>
+    </Router>
   );
 }
 
