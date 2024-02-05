@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-import HomeContact from "../components/home/HomeContact";
-import SubjectTopic from "../components/home/SubjectTopic";
-import Testinomials2 from '../components/home/Testinomials';
 import Contact from '../components/home/Contact';
+import HomeSteps from "../components/home/HomeSteps";
+import SubjectTopic from "../components/home/SubjectTopic";
+import Testinomials from '../components/home/Testinomials';
 
 
 const ExamInfo = () => {
@@ -196,8 +196,8 @@ const Homepage = () => {
         alt=""
         src={require("../assets/images/signup/Vector.png")}
       />
-      
-        <HomeContact />
+
+      <HomeSteps />
       <section className="w-[927px] h-[822px] absolute my-0 mx-[!important] right-[-378px] bottom-[621px]">
         <img
           className="absolute top-[0px] left-[193px] w-[734.2px] h-[641.2px] object-contain"
@@ -205,7 +205,7 @@ const Homepage = () => {
           src={require("../assets/images/signup/Vector.png")}
         />
       </section>
-      <Testinomials2 />
+      <Testinomials />
       <Contact />
       <Footer />
     </div>

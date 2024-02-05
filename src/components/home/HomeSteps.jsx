@@ -1,7 +1,7 @@
 import StepGuide from "./StepGuide";
 
 
-const HomeContact = () => {
+const HomeSteps = () => {
   return (
     <section className="self-stretch flex flex-row items-start mx-auto justify-end py-0 px-0 box-border max-w-full shrink-0 text-left text-5xl  font-inter">
       <div className=" flex flex-row items-start justify-start py-0 px-0 box-border max-w-[136%] shrink-0">
@@ -39,7 +39,7 @@ const HomeContact = () => {
               description2="with detailed explanation to help you improve tremendously."
               propTop="242px"
               propLeft="1011px"
-              
+
             />
             <StepGuide
               step="Step 03"
@@ -48,7 +48,7 @@ const HomeContact = () => {
               description2="observe considerable growth over a period of time. "
               propTop="376px"
               propLeft="1016px"
-             
+
             />
           </div>
         </div>
@@ -57,4 +57,4 @@ const HomeContact = () => {
   );
 };
 
-export default HomeContact;
+export default HomeSteps;
