@@ -57,7 +57,7 @@ const Header = () => {
                 </div>
               </NavLink>
             </div>
-            <b className="relative whitespace-nowrap">91+ 8279662680</b>
+            <b className="relative whitespace-nowrap">+91 8279662680</b>
           </div>
         </div>
       </header>

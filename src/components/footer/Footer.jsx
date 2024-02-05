@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#0D0756] text-white  overflow-hidden w-full ">
       <div className="mx-auto max-w-screen-2xl ">
-        <div className="grid grid-cols-1 mt-9 gap-8 lg:grid-cols-3">
+        <div className="md:flex justify-between font-medium grid mx-[30px]  grid-cols-1 mt-9 gap-8 ">
           <div className="grid justify-center ">
-            <div className=" flex justify-center gap-6 lg:justify-start text-[#063970] ">
+            <div className=" flex justify-center lg:justify-start gap-6  text-[#063970] ">
               <Link to="/" className="no-underline">
                 <div className="flex items-center">
                   <div className="mr-4 mb-[-12px] ">
@@ -18,15 +18,15 @@ const Footer = () => {
                       className="max-h-[60px] max-w-[60px] px-4 pb-2"
                     />
                   </div>
-                  <div className="text-white font-sans font-bold text-[110%] ml-[-8%]">
+                  <div className="text-white font-sans font-bold text-[100%] ml-[-8%]">
                     <h2>
-                      <span>CUET-TestKnock</span>
+                      <span>CUET-TESTKNOCK</span>
                     </h2>
                   </div>
                 </div>
               </Link>
             </div>
-            <p className="mt-6 lg:text-justify md:text-[100%] text-[80%] hover:text-white text-center leading-5 text-white lg:max-w-xs ml-[20px] mr-[20px] ">
+            <p className="mt-6 lg:text-start md:text-[100%] text-[80%] font-medium hover:text-white text-center leading-5 text-white w-[400px]  ml-[20px] mr-[20px] ">
               At TestKnock, we are dedicated to more than just academic success.
               Our unwavering commitment extends to providing you with the
               essential tools and expert guidance. So join us on this
@@ -35,10 +35,10 @@ const Footer = () => {
               achievable pursuit.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-3 lg:col-span-2">
+          <div className="flex  md:grid-cols-3 lg:col-span-2">
             <div className="text-center ">
              
-              <ul className="mt-8 space-y-4 text-[80%] md:text-[100%] list-none no-underline">
+              <ul className=" space-y-2 text-[80%] md:text-[100%] list-none no-underline">
               <p className="md:text-[120%] mb-[40px] text-center text-[90%] text-white hover:text-white ">
                 Company
               </p>
@@ -82,8 +82,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="text-center ">
-             
-              <ul className="mt-8 space-y-4 text-[80%] md:text-[100%] list-none">
+              <ul className="  text-[80%] space-y-[-3px] md:text-[100%] list-none">
               <p className="md:text-[120%] mb-[40px] text-[90%] hover:text-white  text-white whitespace-nowrap">
                 Whom We Serve
               </p>
@@ -119,8 +118,8 @@ const Footer = () => {
             </div>
             <div className="text-center  max-sm:hidden sm:text-left">
               
-              <ul className="mt-8 space-y-4 text-[80%] md:text-[100%]">
-              <p className="md:text-[120%] text-center items-center align-middle mb-[40px] text-[90%] hover:text-white font-medium text-white">
+              <ul className="space-y-5 text-[80%] md:text-[100%]">
+              <p className="md:text-[120%] left-[30px] relative items-center mb-[40px] text-[90%] hover:text-white font-medium text-white">
                 Contact Us
               </p>
                 <li className="flex items-center hover:text-white text-white  gap-1.5 justify-start ">
