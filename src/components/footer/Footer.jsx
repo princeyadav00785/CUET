@@ -20,10 +20,7 @@ const Footer = () => {
                   </div>
                   <div className="text-white font-sans font-bold text-[110%] ml-[-8%]">
                     <h2>
-                      <span>CUET</span>
-                      <span>-Tes</span>
-                      <span>tKn</span>
-                      <span>ock</span>
+                      <span>CUET-TestKnock</span>
                     </h2>
                   </div>
                 </div>
