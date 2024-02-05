@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import HomeContact from "../components/home/HomeContact";
+import { IoMdCall } from "react-icons/io";
+import { config } from "react-spring";
+import Carousel from "react-spring-3d-carousel";
+import { v4 as uuidv4 } from "uuid";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
+import HomeContact from "../components/home/HomeContact";
 import SubjectTopic from "../components/home/SubjectTopic";
-import { v4 as uuidv4 } from "uuid";
-import Carousel from "react-spring-3d-carousel";
-import { config } from "react-spring";
-import { IoMdCall } from "react-icons/io";
 
 
 const ExamInfo = () => {
   const [activeTab, setActiveTab] = useState('cuetNotifications');
-  // const [data, setData] = useState([]);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -238,8 +237,8 @@ const Needhelp = () => {
       <div className=''>
         <h1 className='py-3 px-4 text-[15px] '>Need Guidance or Help in Filling Form?</h1>
         <h1 className='mx-8 pb-4'>
-          <p className='text-sm flex justify-between ' ><span>Sachin Rana</span>   <span> <IoMdCall/> 91+ 9560443520</span> </p>
-          <p className=' flex text-sm justify-between   '><span>Virendra Pratap</span>  <span> <IoMdCall/>  91+ 8279662680</span> </p>
+          <p className='text-sm flex justify-between ' ><span>Sachin Rana</span>   <span> <IoMdCall /> 91+ 9560443520</span> </p>
+          <p className=' flex text-sm justify-between   '><span>Virendra Pratap</span>  <span> <IoMdCall />  91+ 8279662680</span> </p>
         </h1>
       </div>
 
@@ -297,7 +296,7 @@ const Homepage = () => {
             </div>
           </div>
           <div onClick={handleBellIconClick}
-  className="flex z-50 relative  flex-row items-center gap-[7px] text-base cursor-pointer" >
+            className="flex z-50 relative  flex-row items-center gap-[7px] text-base cursor-pointer" >
             <img
               className="h-[54px] w-[52px] relative object-cover"
               loading="eager"
@@ -305,21 +304,21 @@ const Homepage = () => {
               src={require("../assets/images/signup/bellicon.gif")}
             />
             <div className="relative font-semibold">Live Notification</div>
-            
+
           </div>
           <div className='flex flex-row items-center gap-[7px] text-base cursor-pointer'>
-          {isPopupOpen && (
-              <div  className=" top-[82vh] absolute inset-0 flex z-40  bg-opacity-50"
+            {isPopupOpen && (
+              <div className=" top-[82vh] absolute inset-0 flex z-40  bg-opacity-50"
               >
                 <div  >
-                  
+
                   <ExamInfo />
 
                 </div>
               </div>
             )}
           </div>
-        
+
         </div>
         <img
           className="w-[392px] "
@@ -347,14 +346,16 @@ const Homepage = () => {
         />
       </section>
       <div>
-        <h1 className="m-0 relative text-blueviolet-400  text-13xl font-semibold font-inherit text-center mq750:text-7xl mq450:text-lgi">
-          Testimonials
-        </h1>
-        <h1 className="m-0 relative text-blueviolet-400  text-[25px] font-semibold font-inherit text-center mq750:text-7xl mq450:text-lgi">
-          Information
-        </h1>
+        <div className='mb-[-35px]'>
+          <h1 className="m-0 relative text-blueviolet-400  text-13xl font-semibold font-inherit text-center mq750:text-7xl mq450:text-lgi">
+            Testimonials
+          </h1>
+          <h1 className="m-0 relative text-blueviolet-400  text-[25px] font-semibold font-inherit text-center mq750:text-7xl mq450:text-lgi">
+            Information
+          </h1>
+        </div>
 
-        <div className="relative  w-[1280px] overflow-hidden flex flex-row items-center justify-start gap-[94px] max-w-full z-[1] text-center text-xs-2 text-white mq1225:flex-wrap">
+        <div className="relative mb-[-50px]  w-[1280px] overflow-hidden flex flex-row items-center justify-start gap-[94px] max-w-full z-[1] text-center text-xs-2 text-white mq1225:flex-wrap">
 
           <Carroussel
             cards={slides}
@@ -365,7 +366,7 @@ const Homepage = () => {
             showArrows={false}
           />        </div>
       </div>
-      <div className="flex items-center flex-row justify-start gap-[27px]  shrink-0 ">
+      <div className="flex items-center flex-row justify-start gap-[27px] shrink-0 ">
         <form className="m-0 max-w-[669px] rounded-[18.31px] bg-gainsboro-100 flex flex-col items-start justify-start pt-[45px] pb-[22px] pr-[74px] pl-[52px] box-border gap-[24px]  mq750:pl-[26px] mq750:pr-[37px] mq750:box-border">
           <div className="w-[668.5px] h-[315px] relative rounded-[18.31px] bg-gainsboro-100 hidden max-w-full" />
           <h3 className="m-0 relative text-3xl font-bold font-inter text-blueviolet-100 text-left z-[1] mq450:text-lg">
@@ -403,17 +404,17 @@ const Homepage = () => {
                 placeholder="Reason"
                 type="text"
               />
-              <div  className="cursor-pointer [border:none] py-2 px-[30px] bg-[transparent] flex flex-row items-center justify-center relative z-[1]">
+              <div className="cursor-pointer [border:none] py-2 px-[30px] bg-[transparent] flex flex-row items-center justify-center relative z-[1]">
                 {isPopupOpen1 && (
-                  <div onClick={handleBellIconClick2}  className=" w-[350px]  top-[30px]    absolute inset-0 flex z-50  bg-opacity-50"
+                  <div onClick={handleBellIconClick2} className=" w-[350px]  top-[30px]    absolute inset-0 flex z-50  bg-opacity-50"
                   >
                     <div>
-                    <Needhelp />
+                      <Needhelp />
 
                     </div>
                   </div>
                 )}
-                <div  className="h-full w-[calc(100%_-_4px)] absolute my-0 mx-[!important] top-[0px] right-[4px] bottom-[0px] left-[0px] rounded-[18.31px] bg-tomato-200" />
+                <div className="h-full w-[calc(100%_-_4px)] absolute my-0 mx-[!important] top-[0px] right-[4px] bottom-[0px] left-[0px] rounded-[18.31px] bg-tomato-200" />
                 <b onClick={handleBellIconClick2} className="relative text-lg-3 font-inter text-white text-left z-[1]">
                   Need Help
                 </b>

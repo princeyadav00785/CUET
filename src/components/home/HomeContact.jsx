@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 
 const StepGuide = ({
-  step01,
-  aPPEARFORMOCKTEST,
-  atTestKNOCKWeStronglyBeli,
-  theyStandInTodaysCompetit,
+  step,
+  stepHeading,
+  description1,
+  description2,
   propTop,
   propLeft,
   propWidth,
@@ -12,24 +12,24 @@ const StepGuide = ({
   propWidth1,
   propPaddingRight1,
 }) => {
-  const component8Style = useMemo(() => {
+  const componentStyle = useMemo(() => {
     return {
       top: propTop,
       left: propLeft,
-      transition: "transform 0.3s ease-out", 
-      transformOrigin: "left top", 
+      transition: "transform 0.3s ease-out",
+      transformOrigin: "left top",
 
     };
   }, [propTop, propLeft]);
 
-  const step01Style = useMemo(() => {
+  const stepStyle = useMemo(() => {
     return {
       width: propWidth,
       paddingRight: propPaddingRight,
     };
   }, [propWidth, propPaddingRight]);
 
-  const aPPEARFORMOCKStyle = useMemo(() => {
+  const stepHeadingStyle = useMemo(() => {
     return {
       width: propWidth1,
       paddingRight: propPaddingRight1,
@@ -38,26 +38,26 @@ const StepGuide = ({
 
   return (
     <div
-      className="absolute h-[20px] top-[101px] hover:scale-125 left-[1009px] flex flex-col items-start justify-start pt-0 pb-[7px] pr-[22px] pl-0.5 gap-[13px] z-[3] text-left text-5xl text-gray-200 font-inter"
-      style={component8Style}
+      className="absolute h-[20px] top-[101px] hover:scale-110 left-[1009px] flex flex-col items-start justify-start pt-0 pb-[7px] pr-[22px] pl-0.5 gap-[13px] z-[3] text-left text-5xl text-gray-200 font-inter"
+      style={componentStyle}
     >
       <div className="w-full h-full relative my-0 mx-[!important] top-[0px] right-[0px] bottom-[0px] left-[0px] bg-gainsboro-200" />
       <div
         className="relative font-semibold z-[1] mq450:text-lgi"
-        style={step01Style}
+        style={stepStyle}
       >
-        {step01}
+        {step}
       </div>
       <b
         className="relative text-base text-black z-[1]"
-        style={aPPEARFORMOCKStyle}
+        style={stepHeadingStyle}
       >
-        {aPPEARFORMOCKTEST}
+        {stepHeading}
       </b>
       <div className="flex flex-row items-start justify-start py-0 px-[5px] text-smi">
         <b className="relative z-[1]">
-          <p className="m-0">{atTestKNOCKWeStronglyBeli}</p>
-          <p className="m-0">{theyStandInTodaysCompetit}</p>
+          <p className="m-0">{description1}</p>
+          <p className="m-0">{description2}</p>
         </b>
       </div>
     </div>
@@ -80,7 +80,7 @@ const HomeContact = () => {
                 className=" absolute  left-[-0.5px] w-[788px] h-[888.8px] object-contain"
                 alt=""
                 src={require("../../assets/images/signup/Vector3.png")}
-                />
+              />
               <img
                 className="relative left-[524px] w-[450px] h-[450px] object-cover z-[1]"
                 loading="eager"
@@ -89,16 +89,16 @@ const HomeContact = () => {
               />
             </div>
             <StepGuide
-              step01="Step 01"
-              aPPEARFORMOCKTEST="APPEAR FOR MOCK TEST"
-              atTestKNOCKWeStronglyBeli="At TestKNOCK we strongly believe that students need to take tests regularly to know where "
-              theyStandInTodaysCompetit="they stand in today’s competitive environment."
+              step="Step 01"
+              stepHeading="APPEAR FOR MOCK TEST"
+              description1="At TestKNOCK we strongly believe that students need to take tests regularly to know where "
+              description2="they stand in today’s competitive environment."
             />
             <StepGuide
-              step01="Step 02"
-              aPPEARFORMOCKTEST="PRACTICE QUESTION FROM PREPARATORY MODULES"
-              atTestKNOCKWeStronglyBeli="The content team at TestKNOCK has executed thousands interactive Multiple Choice Questions "
-              theyStandInTodaysCompetit="with detailed explanation to help you improve tremendously."
+              step="Step 02"
+              stepHeading="PRACTICE QUESTION FROM PREPARATORY MODULES"
+              description1="The content team at TestKNOCK has executed thousands interactive Multiple Choice Questions "
+              description2="with detailed explanation to help you improve tremendously."
               propTop="242px"
               propLeft="1011px"
               propWidth="111px"
@@ -107,10 +107,10 @@ const HomeContact = () => {
               propPaddingRight1="20px"
             />
             <StepGuide
-              step01="Step 03"
-              aPPEARFORMOCKTEST="PLAN, REVIEW AND EXECUTE"
-              atTestKNOCKWeStronglyBeli="We strongly recommend that students spend 4-5 hrs every week for extensive practice and "
-              theyStandInTodaysCompetit="observe considerable growth over a period of time. "
+              step="Step 03"
+              stepHeading="PLAN, REVIEW AND EXECUTE"
+              description1="We strongly recommend that students spend 4-5 hrs every week for extensive practice and "
+              description2="observe considerable growth over a period of time. "
               propTop="376px"
               propLeft="1016px"
               propWidth="unset"
