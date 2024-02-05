@@ -72,6 +72,3 @@ module.exports = {
     preflight: false,
   },
 };
-
-  plugins: [],
-};
