@@ -86,7 +86,7 @@ const ExamInfo = () => {
         <div className='max-w-[600px] max-md:mx-auto   '>
           <div className="bg-[#ffffff00] backdrop-filter backdrop-blur-[30px] shadow-xl  rounded-xl"
           >
-            <div className="p-8 text-center mb-[-30px]">
+            <div className="pb-8 px-8 text-center mb-[-30px]">
               <ul className="flex flex-wrap justify-center gap-[20px]">
                 {['cuetNotifications', 'otherExamsNotifications'].map((tab) => (
                   <h key={tab}  >
@@ -96,7 +96,7 @@ const ExamInfo = () => {
                     >
                       {tab === 'cuetNotifications' ? 'CUET Notifications' : 'Other Exams Notifications'}
                     </p>
-                    <hr className={`my-6 ${activeTab === tab ? 'border-b border-blue-500' : ''}`} />
+                    <hr className={`my-2 ${activeTab === tab ? 'border-b border-blue-500' : ''}`} />
                   </h>
                 ))}
               </ul>
@@ -234,12 +234,12 @@ const slides = [
 ];
 const Needhelp = () => {
   return (
-    <div className=' text-[10px] bg-[#FFFBEE] rounded-xl '>
+    <div className='  bg-[#FFFBEE]  rounded-xl '>
       <div className=''>
-        <h1 className='py-3 px-4 '>Need Guidance or Help in Filling Form?</h1>
-        <h1 className='px-3 flex flex-col '>
-          <h className=' flex justify-between ' ><p>Sachin Rana</p>   <p> <IoMdCall/> 91+ 9560443520</p> </h>
-          <h className=' flex justify-between '><p>Virendra Pratap</p>  <p> <IoMdCall/>  91+ 8279662680</p> </h>
+        <h1 className='py-3 px-4 text-[15px] '>Need Guidance or Help in Filling Form?</h1>
+        <h1 className='mx-8 pb-4'>
+          <p className='text-sm flex justify-between ' ><span>Sachin Rana</span>   <span> <IoMdCall/> 91+ 9560443520</span> </p>
+          <p className=' flex text-sm justify-between   '><span>Virendra Pratap</span>  <span> <IoMdCall/>  91+ 8279662680</span> </p>
         </h1>
       </div>
 
@@ -296,25 +296,30 @@ const Homepage = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-row items-center gap-[7px] text-base cursor-pointer" >
+          <div onClick={handleBellIconClick}
+  className="flex z-50 relative  flex-row items-center gap-[7px] text-base cursor-pointer" >
             <img
-              onClick={handleBellIconClick}
               className="h-[54px] w-[52px] relative object-cover"
               loading="eager"
               alt=""
               src={require("../assets/images/signup/bellicon.gif")}
             />
             <div className="relative font-semibold">Live Notification</div>
-            {isPopupOpen && (
-              <div className=" top-[50vh] absolute inset-0 flex z-50  bg-opacity-50"
+            
+          </div>
+          <div className='flex flex-row items-center gap-[7px] text-base cursor-pointer'>
+          {isPopupOpen && (
+              <div  className=" top-[82vh] absolute inset-0 flex z-40  bg-opacity-50"
               >
-                <div onClick={handleBellIconClick}>
+                <div  >
+                  
                   <ExamInfo />
 
                 </div>
               </div>
             )}
           </div>
+        
         </div>
         <img
           className="w-[392px] "
@@ -354,7 +359,7 @@ const Homepage = () => {
           <Carroussel
             cards={slides}
             height="500px"
-            width="100%"
+            width="80%"
             margin="0 auto"
             offset={200}
             showArrows={false}
@@ -398,16 +403,17 @@ const Homepage = () => {
                 placeholder="Reason"
                 type="text"
               />
-              <div className="cursor-pointer [border:none] py-2 px-[30px] bg-[transparent] flex flex-row items-center justify-center relative z-[1]">
+              <div  className="cursor-pointer [border:none] py-2 px-[30px] bg-[transparent] flex flex-row items-center justify-center relative z-[1]">
                 {isPopupOpen1 && (
-                  <div className=" top-[30px]  w-[600px]  absolute inset-0 flex z-50  bg-opacity-50"
+                  <div onClick={handleBellIconClick2}  className=" w-[350px]  top-[30px]    absolute inset-0 flex z-50  bg-opacity-50"
                   >
-                    <div  >
-                      <Needhelp />
+                    <div>
+                    <Needhelp />
+
                     </div>
                   </div>
                 )}
-                <div onClick={handleBellIconClick2} className="h-full w-[calc(100%_-_4px)] absolute my-0 mx-[!important] top-[0px] right-[4px] bottom-[0px] left-[0px] rounded-[18.31px] bg-tomato-200" />
+                <div  className="h-full w-[calc(100%_-_4px)] absolute my-0 mx-[!important] top-[0px] right-[4px] bottom-[0px] left-[0px] rounded-[18.31px] bg-tomato-200" />
                 <b onClick={handleBellIconClick2} className="relative text-lg-3 font-inter text-white text-left z-[1]">
                   Need Help
                 </b>

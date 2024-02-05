@@ -1,15 +1,15 @@
 import React from "react";
 import Logo from "../../assets/images/logo_final.png";
-
+import { Link } from "react-router-dom";
 import { IoMdCall, IoMdMail, IoMdPin } from "react-icons/io";
 const Footer = () => {
   return (
-    <footer className="bg-[#0D0756] text-white overflow-hidden w-full ">
+    <footer className="bg-[#0D0756] text-white  overflow-hidden w-full ">
       <div className="mx-auto max-w-screen-2xl ">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 mt-9 gap-8 lg:grid-cols-3">
           <div className="grid justify-center ">
             <div className=" flex justify-center gap-6 lg:justify-start text-[#063970] ">
-              <a to="/">
+              <Link to="/" className="no-underline">
                 <div className="flex items-center">
                   <div className="mr-4 mb-[-12px] ">
                     <img
@@ -18,7 +18,7 @@ const Footer = () => {
                       className="max-h-[60px] max-w-[60px] px-4 pb-2"
                     />
                   </div>
-                  <div className="text-white font-sans font-bold text-[120%] ml-[-8%]">
+                  <div className="text-white font-sans font-bold text-[110%] ml-[-8%]">
                     <h2>
                       <span>CUET</span>
                       <span>-Tes</span>
@@ -27,9 +27,9 @@ const Footer = () => {
                     </h2>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
-            <p className="mt-6 lg:text-justify md:text-[100%] text-[80%] hover:text-white text-center leading-relaxed text-white lg:max-w-xs ml-[20px] mr-[20px] ">
+            <p className="mt-6 lg:text-justify md:text-[100%] text-[80%] hover:text-white text-center leading-5 text-white lg:max-w-xs ml-[20px] mr-[20px] ">
               At TestKnock, we are dedicated to more than just academic success.
               Our unwavering commitment extends to providing you with the
               essential tools and expert guidance. So join us on this
@@ -41,45 +41,45 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-3 lg:col-span-2">
             <div className="text-center ">
              
-              <ul className="mt-8 space-y-4 text-[80%] md:text-[100%] list-none">
+              <ul className="mt-8 space-y-4 text-[80%] md:text-[100%] list-none no-underline">
               <p className="md:text-[120%] mb-[40px] text-center text-[90%] text-white hover:text-white ">
                 Company
               </p>
                 <li>
-                  <a
-                    className="text-white transition hover:text-white"
+                  <Link
+                    className="text-white transition no-underline hover:text-white"
                     to="/"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    className="text-white transition hover:text-white"
+                  <Link
+                    className="text-white transition no-underline hover:text-white"
                     to="/about"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    className="text-white transition hover:text-white"
+                  <Link
+                    className="text-white transition no-underline hover:text-white"
                     to="/syllabus"
                   >
                     Syllabus
-                  </a>
+                  </Link>
                 </li>
 
                 
                 <li>
-                  <a
-                    className="text-white transition hover:text-white"
+                  <Link
+                    className="text-white transition no-underline hover:text-white"
                     to="/courses"
                   >
                     Courses
-                  </a>
+                  </Link>
                 </li>
 
               </ul>
@@ -127,20 +127,20 @@ const Footer = () => {
                 Contact Us
               </p>
                 <li className="flex items-center hover:text-white text-white  gap-1.5 justify-start ">
-                  <a
+                  <Link
                     href="mailto:info@testknock.com"
                     className="gap-1.5 flex no-underline text-white "
                   >
                     <IoMdMail className='relative top-[5px]'  />
                     <h>info@testknock.com</h>
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="flex items-center hover:text-white text-white  gap-1.5 justify-start ">
-                  <a href="tel:9810033495" className="gap-1.5 flex no-underline text-white ">
+                  <Link href="tel:9810033495" className="gap-1.5 flex no-underline text-white ">
                     <IoMdCall className='relative top-[5px]' />
                     <h>9953617456</h>
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="flex items-start hover:text-white text-white justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
@@ -159,17 +159,17 @@ const Footer = () => {
           <h className="text-[110%] font-medium text-white">Contact Us</h>
           <ul className="mt-8  space-y-4 text-[80%]">
             <li className="flex items-center text-white justify-center gap-1.5 ">
-              <a href="mailto:info@testknock.com">
+              <Link href="mailto:info@testknock.com">
                 <h className="flex items-center text-white justify-center gap-1.5 ">
                   <IoMdMail />
                   <span className="flex-1 hover:text-white text-white">
                     info@testknock.com
                   </span>
                 </h>
-              </a>
+              </Link>
             </li>
             <li className="flex items-center text-white justify-center gap-1.5 ">
-              <a href="tel:9953617456">
+              <Link href="tel:9953617456">
                 <h className="flex items-center text-white justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
                   <IoMdCall />
 
@@ -177,7 +177,7 @@ const Footer = () => {
                     9953617456
                   </span>
                 </h>
-              </a>
+              </Link>
             </li>
             <li className="flex mx-auto w-[300px] relative text-ellipsis text-white justify-center items-center">
               <h className="flex  text-white justify-center gap-1.5 ">
