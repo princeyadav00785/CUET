@@ -1,67 +1,56 @@
-import { NavLink, useLocation } from "react-router-dom/dist";
+import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 const Header = () => {
   const location = useLocation();
+  const gradientBackground = {
+    background: 'linear-gradient(90deg, #ACBCFF -4.3%, #FFFFFF 400%)',
+  };
 
   return (
-    <div className="self-stretch mx-8">
-      <header className="max-w-[1280px] mx-auto mt-[10px] h-16 flex flex-row items-start justify-between gap-[20px]  text-left text-base text-mediumblue font-inter">
-        <div className="flex flex-row items-center justify-start gap-[7px]">
-          <NavLink to ={"/"}className="no-underline gap-2 items-center flex">
-            <img
-              className="h-[40.5px] w-[30px] relative object-cover"
-              loading="eager"
-              alt=""
-              src={require("../../assets/images/logo_final.png")}
-            />
-            <b className="relative text-blueviolet-100">CUET-TESTKNOCK</b>
-          </NavLink>
-        </div>
-        <div className="self-stretch w-[618px] flex flex-row items-start justify-start gap-[40px] max-w-full mq750:gap-[40px]">
-          <div className="flex-1 flex flex-col items-start justify-start pt-[7px] px-0 pb-0 box-border max-w-full">
-            <div className="self-stretch flex flex-row items-start justify-between py-0 pr-0.5 pl-0 gap-[20px] mq1050:hidden">
-              <div className="h-[21px] flex flex-col items-start justify-start gap-[2px] text-blueviolet-100">
-                <NavLink to ={"/"}className={`no-underline text-blueviolet-100 ${location.pathname === '/' ? 'active' : ''}`}>
-                  <b className="flex-1 relative cursor-pointer text-blueviolet-100">Home</b>
-                </NavLink>
-                {location.pathname === '/' && (
-                  <div className="w-[23px] h-px relative box-border border-t-[1px] border-solid border-blueviolet-100" />
-                )}
-              </div>
-              <NavLink to ={"/courses"}className={`no-underline text-blueviolet-100 ${location.pathname === '/courses' ? 'active' : ''}`}>
-                <b className="flex-1 relative cursor-pointer">Courses</b>
-              </NavLink>
-              {location.pathname === '/courses' && (
-                <div className="w-[23px] h-px relative box-border border-t-[1px] border-solid border-blueviolet-100" />
-              )}
-              <NavLink to ={"/about"}className="no-underline text-blueviolet-100">
-                <b className="flex-1 relative whitespace-nowrap cursor-pointer">About Us</b>
-              </NavLink>
-              <NavLink to ={"/syllabus"}className="no-underline text-blueviolet-100">
-                <b className="flex-1 relative">Syllabus</b>
-              </NavLink>
-            </div>
-          </div>
-          <div className="self-stretch w-44 flex flex-col items-end justify-start gap-[16px] text-sm">
-            <div className="self-stretch flex-1 flex flex-row items-start justify-between gap-[20px]">
-              <NavLink to ={"/login"}className="cursor-pointer no-underline [border:none] py-0 pr-1.5 pl-0 bg-[transparent] w-[73px] flex flex-row items-center justify-start box-border">
-                <div className="h-[30px] flex-1 relative rounded-xl box-border cursor-pointer border-[1px] border-solid border-blueviolet-100" />
-                <div className="w-[51px] relative text-base font-medium font-inter text-blueviolet-100 text-left inline-block whitespace-nowrap z-[1] ml-[-57px]">
-                  Log In
-                </div>
-              </NavLink>
-              <NavLink to ={"/signup"}className="cursor-pointer no-underline [border:none] py-0 pr-2 pl-0 bg-[transparent] w-[84px] flex flex-row items-center justify-start box-border">
-                <div className="h-[30px] flex-1 relative rounded-xl bg-salmon cursor-pointer" />
-                <div className="relative text-sm font-medium font-inter text-white text-left whitespace-nowrap z-[1] ml-[-64px]">
-                  Sign Up
-                </div>
-              </NavLink>
-            </div>
-            <b className="relative whitespace-nowrap">+91 8279662680</b>
-          </div>
-        </div>
-      </header>
-    </div>
+    <Navbar expand="lg" className="bg-body-tertiary" style={gradientBackground}>
+      <Container fluid>
+        <Navbar.Brand as={NavLink} to="/" className="no-underline gap-2 items-center flex">
+          <img
+            style={{ marginLeft: '80px' }}
+            className="h-[40.5px] w-[30px] relative object-cover"
+            loading="eager"
+            alt=""
+            src={require('../../assets/images/logo_final.png')}
+          />
+          <b className="relative text-blueviolet-100">CUET-TESTKNOCK</b>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={NavLink} to="/" className={`no-underline mr-5 text-blueviolet-100 ${location.pathname === '/' ? 'active' : ''}`} style={{ color: '#8A2BE2', fontWeight: 'bold', padding: '10px', marginLeft:'0px' }}>
+              Home
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/courses" className={`no-underline mr-5 text-blueviolet-100 ${location.pathname === '/courses' ? 'active' : ''}`} style={{ color: '#8A2BE2', fontWeight: 'bold', padding: '10px' }}>
+              Courses
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/about" className="no-underline mr-5 text-blueviolet-100" style={{ color: '#8A2BE2', fontWeight: 'bold', padding: '10px' }}>
+              About Us
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/syllabus" className="no-underline text-blueviolet-100" style={{ color: '#8A2BE2', fontWeight: 'bold', padding: '10px' }}>
+              Syllabus
+            </Nav.Link>
+          </Nav>
+
+          <Nav className="ml-auto">
+            <Nav.Link as={NavLink} to="/login" className="no-underline text-blueviolet-100" style={{ color: '#8A2BE2', fontWeight: 'bold', padding: '10px',border: '2px solid #8A2BE2', borderRadius: '17px' }}>
+              Log In
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/signup" className="no-underline text-blueviolet-100" style={{ color: '#8A2BE2', fontWeight: 'bold', padding: '10px' }}>
+              Sign Up
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
